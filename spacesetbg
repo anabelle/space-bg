@@ -4,9 +4,10 @@ import sys, os, spaceimg
 
 #
 # Setup working firectory
+sys.path.append("/home/error/git/space-bg")
 spcdir = ".spaceimgs"
 tspcdir = "~/"+spcdir
-os.chdir(os.environ['HOME'])
+os.chdir('/home/error')
 if not os.path.exists(spcdir):
 	try:
 		os.makedirs(spcdir)
@@ -51,7 +52,8 @@ def grabbg():
 				or os.system('notify-send -t 0 "could not write to '+tspcdir+'/today.gif"')
 	#
 	# Set background
-	os.system('hsetroot '+opt+'today.jpg')
+	os.system('hsetroot '+opt+'/home/error/.spaceimgs/today.jpg')
+
 	# Dump HTML describing image
 	note = '<u><b>'+str(bg[0])+'</b></u>\n'
 	note += bg[1]
