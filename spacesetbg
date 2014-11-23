@@ -32,12 +32,6 @@ def grabbg():
 	else:
 		path = bg[2]
 	#
-	# Detemine if we already have today's image
-	if os.path.exists("path.txt"):
-		cur_path = open("path.txt", "r").read().strip()
-		if cur_path == path:
-			os.system('hsetroot '+opt+'today.jpg')
-			sys.exit(0)
 	try:
 		with open('path.txt', 'w') as file:
 			file.write(path)

@@ -37,7 +37,7 @@ def getbg():
 	item.append(i[2].get_text().strip().replace('\n','<br>').replace('\xa0',''))
 	## url
 	try:
-		i = tree.img.parent['href']
+		i = 'http://aplicaciones.canalclima.com/images/ipcam/cclima-bog-001/web/camera0.jpeg'
 	except AttributeError as e: #no image
 		# maybe video
 		item.append("")
